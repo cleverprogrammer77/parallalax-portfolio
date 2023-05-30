@@ -7,6 +7,7 @@ const jobTitles = document.querySelectorAll(".jobTitle");
 const projectsTitle = document.querySelector(".projectsTitle");
 const phones = document.querySelectorAll(".phone");
 const laptop = document.querySelector(".laptop");
+const githubChart = document.querySelector(".githubChart");
 
 for (let i = 0; i < 365; i++) {
   const list = [
@@ -45,4 +46,9 @@ window.addEventListener("scroll", () => {
   phones[0].style.transform = `translateX(calc(500vh - ${offsetY}px))`;
   laptop.style.transform = `translateX(calc(-600vh + ${offsetY}px))`;
   phones[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`;
+});
+
+githubChart.addEventListener("click", () => {
+  // (location.href = "https://github.com/cleverprogrammer77"), "_blank";
+  window.open("https://github.com/cleverprogrammer77", "_blank");
 });
